@@ -1,6 +1,5 @@
-
 name: sentinelapp
-description: Sentinel test app
+description: Sentinel v2 test app
 publish_to: 'none'
 version: 1.0.0+1
 
