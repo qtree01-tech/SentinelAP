@@ -7,18 +7,23 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
 
-      - uses: subosito/flutter-action@v3
-  with:
-    channel: 'stable'
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v3
+        with:
+          channel: stable
 
-      - run: flutter pub get
+      - name: Get dependencies
+        run: flutter pub get
 
-      - run: flutter build apk --release
+      - name: Build APK
+        run: flutter build apk --release
 
-      - uses: actions/upload-artifact@v4
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
         with:
           name: sentinel-apk
           path: build/app/outputs/flutter-apk/app-release.apk
