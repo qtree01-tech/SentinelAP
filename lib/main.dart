@@ -10,13 +10,13 @@ class SentinelApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Sentinel',
+      title: 'Sentinel v2',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Sentinel'),
+          title: const Text('Sentinel v2 Test'),
         ),
         body: const Center(
-          child: Text('Sentinel APK Test Build'),
+          child: Text('Hello, Sentinel APK v2 embedding!'),
         ),
       ),
     );
